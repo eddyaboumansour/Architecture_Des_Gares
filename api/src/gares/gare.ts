@@ -1,3 +1,6 @@
+import { Entity } from "typeorm"
+
+@Entity()
 export class Gare {
      datasetid: string 
      recordid:string 

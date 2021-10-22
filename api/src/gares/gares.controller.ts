@@ -1,4 +1,4 @@
-import { Controller, Get, Post, Body, Patch, Param, Delete } from '@nestjs/common';
+import { Controller, Get, Post, Body, Patch, Param, Delete, Query } from '@nestjs/common';
 import { Gare } from './gare';
 import { GaresService } from './gares.service';
 
@@ -13,13 +13,15 @@ export class GaresController {
   }
 
   @Get()
-  findAll() {
-    return this.garesService.findAll();
+  findAll(@Query('page') page:number=1,@Query('limit') limit:number=5) {
+    return this.garesService.findAll(page,limit);
   }
+ 
+
 
   @Get(':titre')
-  findOne(@Param('titre') titre: string) {
-    return this.garesService.search(titre);
+  findOne(@Param('titre') titre: string,@Query('page') page:number=1,@Query('limit') limit:number=5) {
+    return this.garesService.search(titre,page,limit);
   }
 
   @Patch(':titre')

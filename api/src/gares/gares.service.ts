@@ -1,7 +1,5 @@
 import { HttpService } from '@nestjs/axios';
-import { Injectable, OnModuleInit } from '@nestjs/common';
-import { response } from 'express';
-import { firstValueFrom, map } from 'rxjs';
+import { Injectable, OnModuleInit, Query } from '@nestjs/common';
 import { Gare } from './gare';
 
 @Injectable()
@@ -10,7 +8,8 @@ export class GaresService implements OnModuleInit{
 private gareStorage=new Map<string,Gare>();
 private datalink='https://data.opendatasoft.com/api/records/1.0/search/?dataset=archives-sncf-new%40datasncf&q=&sort=-id&facet=thematique&facet=sous_thematique&refine.sous_thematique=Architecture+des+gares'
 private gareFill=new Gare();
-  constructor(private httpService:HttpService){}
+  constructor(private httpService:HttpService)
+  { }
 
   async onModuleInit() {
 
@@ -62,21 +61,25 @@ private gareFill=new Gare();
    
   }
 
-  findAll():Gare[] {
-    return Array.from(this.gareStorage.values()).sort((gare1,gare2)=> gare1.titre.localeCompare(gare2.titre))
+  findAll(page:number,limit:number):Gare[] {
+    return Array.from(this.gareStorage.values()).sort((gare1,gare2)=> gare1.titre.localeCompare(gare2.titre)).slice((page-1)*limit,page*limit)
+    
   }
 
-  search(titre: string) {
-    //const foundBook = this.gareStorage.get(titre);
-   // const foundBook=this.gareStorage.forEach(gare=>{return titre.match(gare.titre)})
-   var s:string="^"+titre;
-   const foundBook=Array.from(this.gareStorage.values()).filter((gare) => gare.titre.toLowerCase().match(s.toLowerCase()) );
-    if (!foundBook) {
-      throw new Error(`No gare found with titre ${titre}`);
-    
-    }
 
-    return foundBook;
+
+
+  search(titre: string,page:number,limit:number):Gare[] {
+  
+
+    const escapedTerm = titre.toLowerCase().trim();
+
+    return Array.from(this.gareStorage.values()).filter((gare) => {
+      return (
+          gare.titre.toLowerCase().includes(escapedTerm)
+      );
+    }).sort((gare1,gare2)=> gare1.titre.localeCompare(gare2.titre)).slice((page-1)*limit,page*limit);
+
   }
 
   update(titre: string, favoris:boolean) {
