@@ -8,12 +8,13 @@ export class GaresService implements OnModuleInit{
 private gareStorage=new Map<string,Gare>();
 private datalink='https://data.opendatasoft.com/api/records/1.0/search/?dataset=archives-sncf-new%40datasncf&q=&sort=-id&facet=thematique&facet=sous_thematique&refine.sous_thematique=Architecture+des+gares'
 private gareFill=new Gare();
+
   constructor(private httpService:HttpService)
   { }
 
   async onModuleInit() {
 
-    const externalGares =await this.httpService.get<Gare[]>(this.datalink).subscribe(
+    await this.httpService.get<Gare[]>(this.datalink).subscribe(
       gare=>{
         gare.data['records'].forEach(gare => {
          
