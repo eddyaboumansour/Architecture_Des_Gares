@@ -87,6 +87,7 @@ private gareFill=new Gare();
 
   update(titre: string, favoris:boolean):Gare {
      this.gareStorage.get(titre).favoris=favoris["favoris"];
+     console.log("Hi")
      console.log(titre)
      console.log(favoris)
      
