@@ -13,7 +13,7 @@ interface GareService {
     fun createGare(@Body gare: Gare): Call<Gare>
 
     @PATCH("gares/{titre}")
-    fun addFavoris(@Path("titre") titre:String, @Body favoris:Boolean) :Call<Gare>
+    fun addFavoris(@Path("titre") titre:String, @Body favoris:Favoris) :Call<Gare>
 
 
 }

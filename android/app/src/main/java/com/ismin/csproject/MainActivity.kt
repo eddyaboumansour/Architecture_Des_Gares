@@ -1,13 +1,10 @@
 package com.ismin.csproject
 
-import android.accessibilityservice.GestureDescription
-import android.content.Context
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.util.Log
 import android.view.Menu
 import android.view.MenuItem
-import android.view.View
 import android.widget.SearchView
 import android.widget.Toast
 
@@ -25,11 +22,6 @@ import retrofit2.Callback
 import retrofit2.Response
 import retrofit2.Retrofit
 import retrofit2.converter.gson.GsonConverterFactory
-import kotlin.properties.Delegates
-import androidx.core.view.MenuItemCompat
-
-
-
 
 
 class MainActivity : AppCompatActivity(),GareUpdater{
@@ -233,7 +225,7 @@ class MainActivity : AppCompatActivity(),GareUpdater{
 
         fragment=ListFragment.newInstance(garesList.getAllGares())
         adapter.addFragment(fragment, "Gares")
-        adapter.addFragment(MapFragment(),"Locations")
+        adapter.addFragment(MapFragment(garesList),"Locations")
         adapter.addFragment(InfoFragment(),"Info")
 
 
@@ -246,9 +238,9 @@ class MainActivity : AppCompatActivity(),GareUpdater{
     }
 
     override fun onGareUpdate(holder:GareViewHolder,gare: Gare,favoris:Boolean) {
+       var favoris=Favoris(!favoris)
 
-
-            gareService.addFavoris(gare.titre,true).enqueue(object : Callback<Gare> {
+            gareService.addFavoris(gare.titre,favoris).enqueue(object : Callback<Gare> {
                 override fun onResponse(
                     call: Call<Gare>,
                     response: Response<Gare>
@@ -257,7 +249,7 @@ class MainActivity : AppCompatActivity(),GareUpdater{
 
                     updatedGare?.let {
 
-                        Log.i("eddy","Hi")
+
 
                     }
                     gare.favoris=!favoris

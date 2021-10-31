@@ -42,8 +42,9 @@ class ListFragment() : Fragment() {
     {
             gares=newgares
             adapter=GareAdapter(gares,gareUpdater)
-            rcvGares.adapter = adapter
             adapter.notifyDataSetChanged()
+            rcvGares.adapter = adapter
+
     }
     override fun onCreateView(
         inflater: LayoutInflater, container: ViewGroup?,

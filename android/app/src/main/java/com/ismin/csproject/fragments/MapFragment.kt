@@ -1,6 +1,7 @@
 package com.ismin.csproject.fragments
 
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
@@ -14,11 +15,11 @@ import com.ismin.csproject.GaresList
 import com.ismin.csproject.R
 
 
-class MapFragment : Fragment() {
+class MapFragment(garesList: GaresList) : Fragment() {
 
 lateinit var mapFragment: SupportMapFragment
 lateinit var googleMap: GoogleMap
-private val garesList= GaresList()
+private val garesList= garesList
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -34,7 +35,9 @@ private val garesList= GaresList()
         mapFragment= childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(OnMapReadyCallback {
             googleMap=it
-            garesList.getAllGares().forEach{it1->
+            Log.i("Maps:", garesList.getTotalNumberOfGares().toString())
+            garesList.getAllGares().forEach{ it1->
+                Log.i("Maps:",it1.titre)
                 val location =LatLng(it1.coordx.toDouble(),it1.coordy.toDouble())
             googleMap.addMarker(MarkerOptions().position(location).title(it1.titre))
             }
