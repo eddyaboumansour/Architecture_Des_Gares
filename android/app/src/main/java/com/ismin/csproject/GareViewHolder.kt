@@ -1,12 +1,15 @@
-package com.ismin.android
+package com.ismin.csproject
 
 import android.view.View
+import android.widget.ImageButton
+import android.widget.ImageView
 import android.widget.TextView
 import androidx.recyclerview.widget.RecyclerView
 
-class BookViewHolder(rootView: View): RecyclerView.ViewHolder(rootView) {
+class GareViewHolder(rootView: View): RecyclerView.ViewHolder(rootView) {
 
-    var txvTitle = rootView.findViewById<TextView>(R.id.r_book_txv_title)
-    var txvAuthor = rootView.findViewById<TextView>(R.id.r_book_txv_author)
-    var txvDate = rootView.findViewById<TextView>(R.id.r_book_txv_date)
+    var txvTitre = rootView.findViewById<TextView>(R.id.r_gare_titre)
+    var txvPeriode = rootView.findViewById<TextView>(R.id.r_gare_periode)
+    var txvImage = rootView.findViewById<ImageView>(R.id.r_gare_image)
+    var btnFavoris=rootView.findViewById<ImageButton>(R.id.r_gare_favoris)
 }

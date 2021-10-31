@@ -1,6 +1,4 @@
-package com.ismin.csproject.fragments
-
-import com.ismin.csproject.Gare
+package com.ismin.csproject
 
 class GaresList {
 
@@ -14,7 +12,8 @@ class GaresList {
         return storage[titre]
     }
 
-    fun getAllBooks(): ArrayList<Gare> {
+    fun getAllGares(): ArrayList<Gare> {
+
         return ArrayList(storage.values.sortedBy { it.titre })
     }
 

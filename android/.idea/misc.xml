@@ -3,11 +3,17 @@
   <component name="DesignSurface">
     <option name="filePathToZoomLevelMap">
       <map>
+        <entry key="..\:/Users/User/Desktop/ISMIN/SecondYear/Web development/Architecture_Des_Gares/ismin-project/Architecture_Des_Gares/android/app/src/main/res/drawable/ic_baseline_favorite_24.xml" value="0.3828125" />
+        <entry key="..\:/Users/User/Desktop/ISMIN/SecondYear/Web development/Architecture_Des_Gares/ismin-project/Architecture_Des_Gares/android/app/src/main/res/drawable/ic_baseline_favorite_border_24.xml" value="0.3828125" />
+        <entry key="..\:/Users/User/Desktop/ISMIN/SecondYear/Web development/Architecture_Des_Gares/ismin-project/Architecture_Des_Gares/android/app/src/main/res/drawable/ic_baseline_search_24.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/User/Desktop/ISMIN/SecondYear/Web development/Architecture_Des_Gares/ismin-project/Architecture_Des_Gares/android/app/src/main/res/drawable/ic_search_black_24dp.xml" value="0.22083333333333333" />
+        <entry key="..\:/Users/User/Desktop/ISMIN/SecondYear/Web development/Architecture_Des_Gares/ismin-project/Architecture_Des_Gares/android/app/src/main/res/layout/activity_gare_details.xml" value="0.25" />
         <entry key="..\:/Users/User/Desktop/ISMIN/SecondYear/Web development/Architecture_Des_Gares/ismin-project/Architecture_Des_Gares/android/app/src/main/res/layout/activity_main.xml" value="0.3582295988934993" />
         <entry key="..\:/Users/User/Desktop/ISMIN/SecondYear/Web development/Architecture_Des_Gares/ismin-project/Architecture_Des_Gares/android/app/src/main/res/layout/fragment_info.xml" value="0.17255434782608695" />
-        <entry key="..\:/Users/User/Desktop/ISMIN/SecondYear/Web development/Architecture_Des_Gares/ismin-project/Architecture_Des_Gares/android/app/src/main/res/layout/fragment_list.xml" value="0.17255434782608695" />
-        <entry key="..\:/Users/User/Desktop/ISMIN/SecondYear/Web development/Architecture_Des_Gares/ismin-project/Architecture_Des_Gares/android/app/src/main/res/layout/fragment_map.xml" value="0.17255434782608695" />
-        <entry key="..\:/Users/User/Desktop/ISMIN/SecondYear/Web development/Architecture_Des_Gares/ismin-project/Architecture_Des_Gares/android/app/src/main/res/menu/main_menu.xml" value="0.20416666666666666" />
+        <entry key="..\:/Users/User/Desktop/ISMIN/SecondYear/Web development/Architecture_Des_Gares/ismin-project/Architecture_Des_Gares/android/app/src/main/res/layout/fragment_list.xml" value="0.33" />
+        <entry key="..\:/Users/User/Desktop/ISMIN/SecondYear/Web development/Architecture_Des_Gares/ismin-project/Architecture_Des_Gares/android/app/src/main/res/layout/fragment_map.xml" value="0.1" />
+        <entry key="..\:/Users/User/Desktop/ISMIN/SecondYear/Web development/Architecture_Des_Gares/ismin-project/Architecture_Des_Gares/android/app/src/main/res/layout/row_gare.xml" value="0.1" />
+        <entry key="..\:/Users/User/Desktop/ISMIN/SecondYear/Web development/Architecture_Des_Gares/ismin-project/Architecture_Des_Gares/android/app/src/main/res/menu/main_menu.xml" value="0.5" />
       </map>
     </option>
   </component>

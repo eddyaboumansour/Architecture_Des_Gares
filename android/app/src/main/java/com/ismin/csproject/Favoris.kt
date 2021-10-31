@@ -1,4 +1,12 @@
-package com.ismin.csproject.fragments
+package com.ismin.csproject
 
-class Favoris {
+class Favoris(favoris: Boolean) {
+    operator fun not(): Boolean {
+
+        return !favoris
+    }
+
+    private var favoris:Boolean=favoris
+
+
 }
