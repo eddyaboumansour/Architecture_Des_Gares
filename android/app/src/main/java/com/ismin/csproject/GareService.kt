@@ -1,15 +1,19 @@
-package com.ismin.android
+package com.ismin.csproject
 
 import retrofit2.Call
-import retrofit2.http.Body
-import retrofit2.http.GET
-import retrofit2.http.POST
+import retrofit2.http.*
+import java.io.Serializable
 
-interface BookService {
+interface GareService {
 
-    @GET("books")
-    fun getAllBooks(): Call<List<Book>>
+    @GET("gares/{titre}?limit=10")
+    fun getAllGare(@Path("titre") titre:String): Call<List<Gare>>
 
-    @POST("books")
-    fun createBook(@Body book: Book): Call<Book>
+    @POST("gares")
+    fun createGare(@Body gare: Gare): Call<Gare>
+
+    @PATCH("gares/{titre}")
+    fun addFavoris(@Path("titre") titre:String, @Body favoris:Boolean) :Call<Gare>
+
+
 }

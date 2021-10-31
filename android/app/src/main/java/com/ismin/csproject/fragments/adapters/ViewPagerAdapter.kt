@@ -3,8 +3,9 @@ package com.ismin.csproject.fragments.adapters;
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentManager;
 import androidx.fragment.app.FragmentPagerAdapter
+import androidx.fragment.app.FragmentStatePagerAdapter
 
- class ViewPagerAdapter(supportFragmentManager: FragmentManager) : FragmentPagerAdapter(supportFragmentManager,BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
+class ViewPagerAdapter(supportFragmentManager: FragmentManager) : FragmentStatePagerAdapter(supportFragmentManager,BEHAVIOR_RESUME_ONLY_CURRENT_FRAGMENT) {
     private val mFragmentList=ArrayList<Fragment>()
     private val mFragmentTitleList=ArrayList<String>()
 
@@ -21,9 +22,15 @@ import androidx.fragment.app.FragmentPagerAdapter
         return mFragmentTitleList[position]
     }
 
+     override fun getItemPosition(`object`: Any): Int {
+         return POSITION_NONE
+     }
+
     fun addFragment(fragment:Fragment,title:String)
     {
         mFragmentList.add(fragment)
         mFragmentTitleList.add(title)
+
+
     }
 }
