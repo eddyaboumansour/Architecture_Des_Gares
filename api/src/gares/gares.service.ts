@@ -83,8 +83,9 @@ private gareFill=new Gare();
 
   }
 
-  update(titre: string, favoris:boolean) {
-    return this.gareStorage.get(titre).favoris=favoris["favoris"];
+  update(titre: string, favoris:boolean):Gare {
+     this.gareStorage.get(titre).favoris=favoris["favoris"];
+     return this.gareStorage.get(titre)
   
   }
 
