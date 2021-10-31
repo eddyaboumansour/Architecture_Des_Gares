@@ -1,5 +1,7 @@
 import { HttpService } from '@nestjs/axios';
 import { Injectable, OnModuleInit, Query } from '@nestjs/common';
+import { Console } from 'console';
+import { getSystemErrorMap } from 'util';
 import { Gare } from './gare';
 
 @Injectable()
@@ -85,6 +87,9 @@ private gareFill=new Gare();
 
   update(titre: string, favoris:boolean):Gare {
      this.gareStorage.get(titre).favoris=favoris["favoris"];
+     console.log(titre)
+     console.log(favoris)
+     
      return this.gareStorage.get(titre)
   
   }
