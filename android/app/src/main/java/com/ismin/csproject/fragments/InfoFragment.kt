@@ -79,7 +79,11 @@ class InfoFragment : Fragment() {
 
 
         txvLibraries.setText(
-            Html.fromHtml("<h1>Librairies utilisées</h1>")
+            Html.fromHtml("<h1>Librairies utilisées</h1>"+
+            "- play-services-maps: Api google pour afficher la carte et ses fonctionnalités. "+
+            "- logging-interceptor: Intercepte les requêtes http et permet d'afficher les informations relatives au Body et à la réponse du serveur."+
+            "- retrofit: Paquet pour envoyer et recevoir des requêtes HTTP"+
+            "- picasso: Aide pour l'affichage des images du RecyclerView")
         )
 
         return view
