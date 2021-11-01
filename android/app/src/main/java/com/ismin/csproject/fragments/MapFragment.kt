@@ -13,6 +13,10 @@ import com.google.android.gms.maps.model.LatLng
 import com.google.android.gms.maps.model.MarkerOptions
 import com.ismin.csproject.GaresList
 import com.ismin.csproject.R
+import com.google.android.gms.maps.model.Marker
+
+
+
 
 
 class MapFragment(garesList: GaresList) : Fragment() {
@@ -35,16 +39,21 @@ private val garesList= garesList
         mapFragment= childFragmentManager.findFragmentById(R.id.map) as SupportMapFragment
         mapFragment.getMapAsync(OnMapReadyCallback {
             googleMap=it
-            Log.i("Maps:", garesList.getTotalNumberOfGares().toString())
             garesList.getAllGares().forEach{ it1->
+
                 Log.i("Maps:",it1.titre)
                 val location =LatLng(it1.coordx.toDouble(),it1.coordy.toDouble())
-            googleMap.addMarker(MarkerOptions().position(location).title(it1.titre))
+                var marker=googleMap.addMarker(MarkerOptions().position(location).title(it1.titre))
+
             }
 
 
         })
         return view
     }
+
+
+
+
 
 }

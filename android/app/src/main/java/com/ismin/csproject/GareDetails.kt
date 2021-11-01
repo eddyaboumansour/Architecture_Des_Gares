@@ -19,19 +19,28 @@ class GareDetails : AppCompatActivity() {
         var txvPeriode = findViewById<TextView>(R.id.d_gare_periode)
         var txvLegende = findViewById<TextView>(R.id.d_gare_legende)
         val actionBar: ActionBar?=supportActionBar
-        actionBar!!.setDisplayHomeAsUpEnabled(true)
-        actionBar!!.setDisplayShowHomeEnabled(true)
-
         var intent=intent
         val dTitre=intent.getStringExtra("iTitre")
         val dImage=intent.getStringExtra("iImage")
         val dLegende=intent.getStringExtra("iLegende")
         val dPeriode=intent.getStringExtra("iPeriode")
-        Log.i("Eddy",dPeriode.toString())
-        actionBar.setTitle(dTitre)
+
+
+        if (actionBar != null) {
+            actionBar.setDisplayHomeAsUpEnabled(true)
+            actionBar.setDisplayShowHomeEnabled(true)
+            actionBar.setHomeButtonEnabled(true)
+            actionBar.setTitle(dTitre)
+        }
+
         Picasso.get().load(dImage).into(txvImage);
         txvLegende.text=dLegende
         txvPeriode.text=dPeriode
 
+    }
+
+    override fun onSupportNavigateUp(): Boolean {
+        onBackPressed()
+        return true
     }
 }
