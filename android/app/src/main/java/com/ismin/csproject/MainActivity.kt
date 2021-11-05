@@ -156,15 +156,12 @@ class MainActivity : AppCompatActivity(),GareUpdater{
                     favorites = false
 
                 }
-                garesList.clear()
+
                 refreshTabs("")
                 true
             }
             R.id.main_menu_refresh -> {
                 garesList.clear()
-                Log.i("Refresh: ",garesList.getTotalNumberOfGares().toString())
-
-
 
                 true
             }
@@ -183,7 +180,7 @@ class MainActivity : AppCompatActivity(),GareUpdater{
             response: Response<List<Gare>>
         ) {
             val allGares: List<Gare>? = response.body()
-
+            garesList.clear()
             allGares?.forEach {
                 if(favorites.equals(false)) {
                     garesList.addGare(it)
