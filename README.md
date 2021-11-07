@@ -41,24 +41,24 @@ npm run build
 
 # Functionalités
 
-Récupérer un résumé de toutes les données (i.e. seulement les infos les plus importantes pour l’affichage sur une carte + liste + favori ou non). 
-GET /gares
-on a ajouté de la pagination a cette API donc en appelant GET /gares c'est equivalent a 
+- Récupérer un résumé de toutes les données (i.e. seulement les infos les plus importantes pour l’affichage sur une carte + liste + favori ou non). 
+ GET /gares
+- on a ajouté de la pagination a cette API donc en appelant GET /gares c'est equivalent a 
 GET /gares?page=1&&limit=10 par defaut
-Récupérer le détail d’une donnée (pour l’affichage dans l’écran de détails). Utiliser pour la recherche des données aussi
+- Récupérer le détail d’une donnée (pour l’affichage dans l’écran de détails). Utiliser pour la recherche des données aussi
 GET /gares/:titre (aussi avec pagination)
-Mettre une donnée en favori ou non. 
+- Mettre une donnée en favori ou non. 
 PATCH /gares/:titre (avec un body { favoris:true/false })
-Un endpoint pour créer de nouvelles données
+- Un endpoint pour créer de nouvelles données
 POST /gares (avec un body contenant en format jason les attributs du nouveau objet)
 
-Déployé sur CleverCloud: https://console.clever-cloud.com/organisations/orga_693c81f4-6d20-46f3-901b-29afc84a379d/applications/app_6c17b1b5-9cde-405a-938c-c79a21284ea3
+- Déployé sur CleverCloud: https://console.clever-cloud.com/organisations/orga_693c81f4-6d20-46f3-901b-29afc84a379d/applications/app_6c17b1b5-9cde-405a-938c-c79a21284ea3
 
 ## Android
 
  - Start Android Studio
  - Select `Open an existing Android Studio project` and pick this directory
- - 
+ 
 # Functionalités
 
 - Récupération des données de l’api puis affichage sur une carte, dans une liste et sur un écran avec le détail d’une donnée
