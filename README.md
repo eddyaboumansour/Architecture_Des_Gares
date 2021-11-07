@@ -10,15 +10,12 @@ This project template contains:
  - a skeleton NestJS app in `api`  (can be opened in Webstorm, Visual Studio Code etc)
  - a skeleton Android app in `android` (can be opened in Android Studio)
 
-<h1 align="center">Hi 👋, I'm Eddy and Mathieu</h1>
-<h3 align="center">computer science students in Mines Saint Etienne</h3>
+Hi 👋, I'm Eddy and Mathieu
+computer science students in Mines Saint Etienne
+📫 How to reach us **eddy.aboumansour@etu.emse.fr**,**mathieu.sinleesou@etu.emse.fr**
 
-- 📫 How to reach me **eddy.aboumansour@etu.emse.fr**
 
 
-<h3 align="left">Languages and Tools:</h3>
-
-<p align="left"> <a href="https://developer.android.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg" alt="android" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://www.typescriptlang.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> </a> </p>
 
 
 ### 🚀 Getting Started
@@ -46,34 +43,33 @@ npm run build
 
 Récupérer un résumé de toutes les données (i.e. seulement les infos les plus importantes pour l’affichage sur une carte + liste + favori ou non). 
 GET /gares
+on a ajouté de la pagination a cette API donc en appelant GET /gares c'est equivalent a 
+GET /gares?page=1&&limit=10 par defaut
 Récupérer le détail d’une donnée (pour l’affichage dans l’écran de détails). Utiliser pour la recherche des données aussi
-GET /gares/:titre
+GET /gares/:titre (aussi avec pagination)
 Mettre une donnée en favori ou non. 
-PATCH /gares/:titre (avec un body)
+PATCH /gares/:titre (avec un body { favoris:true/false })
 Un endpoint pour créer de nouvelles données
 POST /gares (avec un body contenant en format jason les attributs du nouveau objet)
 
-Gérer la pagination des données sur le endpoint retournant le résumé des données
-
-
 Déployé sur CleverCloud: https://console.clever-cloud.com/organisations/orga_693c81f4-6d20-46f3-901b-29afc84a379d/applications/app_6c17b1b5-9cde-405a-938c-c79a21284ea3
 
-##Android
+## Android
 
  - Start Android Studio
  - Select `Open an existing Android Studio project` and pick this directory
+ - 
+# Functionalités
 
-Récupération des données de l’api puis affichage sur une carte, dans une liste et sur un écran avec le détail d’une donnée
-
-Mettre en Favori les éléments et les filtrer
-
-Application composée au minimum de : 
-3 Fragment (la liste + l’ecran avec les infos)
-2 Activity
-Une Toolbar sera présente et permettra de rafraîchir les données récupérées et affichées
-
-Amélioration de l’expérience utilisateur :
-Mise en place d’un système de recherche/filtre sur la liste affichée
+- Récupération des données de l’api puis affichage sur une carte, dans une liste et sur un écran avec le détail d’une donnée
+- Mettre en Favori les éléments et les filtrer
+- Application composée de : 
+3 Fragment (Liste des gares, positions des gares, informations sur l'appli)
+2 Activity (3 Fragements + Détaille de chaque gare)
+Une Toolbar sera présente et permettra de rafraîchir les données récupérées et affichées, Rechercher les gares par titre, voir la liste des favoris.
 
 
+## Languages and Tools:
+
+[![android](https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg) ](https://developer.android.com) [ ![nodejs](https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg) ](https://nodejs.org) [![typescript](https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg)](https://www.typescriptlang.org/)
  
