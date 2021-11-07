@@ -69,7 +69,8 @@ Déployé sur CleverCloud: https://console.clever-cloud.com/organisations/orga_6
 Une Toolbar sera présente et permettra de rafraîchir les données récupérées et affichées, Rechercher les gares par titre, voir la liste des favoris.
 
 
-## Languages and Tools:
+<h3 align="left">Languages and Tools:</h3>
 
-[![android](https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg) ](https://developer.android.com) [ ![nodejs](https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg) ](https://nodejs.org) [![typescript](https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg)](https://www.typescriptlang.org/)
- 
+<p align="left"> <a href="https://developer.android.com" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/android/android-original-wordmark.svg" alt="android" width="40" height="40"/> </a> <a href="https://nodejs.org" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/nodejs/nodejs-original-wordmark.svg" alt="nodejs" width="40" height="40"/> </a> <a href="https://www.typescriptlang.org/" target="_blank"> <img src="https://raw.githubusercontent.com/devicons/devicon/master/icons/typescript/typescript-original.svg" alt="typescript" width="40" height="40"/> </a> </p>
+
+
