@@ -4,7 +4,7 @@ Course followed by students of Mines St Etienne, ISMIN - M2 Computer Science.
 
 [![Mines St Etienne](./logo.png)](https://www.mines-stetienne.fr/)
 
-# Project template
+# Historic French Train Stations Project 
 
 This project template contains:
  - a skeleton NestJS app in `api`  (can be opened in Webstorm, Visual Studio Code etc)
@@ -61,7 +61,7 @@ POST /gares (with a body containing new object's attributes in json format)
  
 # Features
 
-- Retrieval of API's data then display in a list, on a map, or a screen containing the detail of a specific train station
+- Retrieval of API's data then display in a list, on a map, or a screen containing the details of a specific train station
 - Addition of elements in the favorites list, then filter it
 - Application composed of: 
 3 Fragments (Train stations list, train station positions on a map, application's information)
