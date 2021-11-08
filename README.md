@@ -10,7 +10,7 @@ This project template contains:
  - a skeleton NestJS app in `api`  (can be opened in Webstorm, Visual Studio Code etc)
  - a skeleton Android app in `android` (can be opened in Android Studio)
 
-Hi 👋, we are Eddy and Mathieu
+Hi 👋, we are Eddy and Mathieu,
 Computer Science students at Ecole des Mines de Saint Etienne
 📫 How to reach us **eddy.aboumansour@etu.emse.fr**,**mathieu.sinleesou@etu.emse.fr**
 
