@@ -21,7 +21,7 @@ Computer Science students at Ecole des Mines de Saint Etienne
 ### 🚀 Getting Started
 ## API
 
-Open a terminal, go to the directory of this TP and run the following commands:
+Open a terminal, go to the directory of this Project and run the following commands:
 
 ```sh
 # This will install all needed dependencies
