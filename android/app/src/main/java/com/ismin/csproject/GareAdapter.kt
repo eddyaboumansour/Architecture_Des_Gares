@@ -2,30 +2,23 @@ package com.ismin.csproject
 
 import android.content.Context
 import android.content.Intent
-
-import android.util.Log
 import android.view.LayoutInflater
 import android.view.ViewGroup
-import android.widget.Toast
 import androidx.core.content.ContextCompat
 import androidx.recyclerview.widget.RecyclerView
 import com.squareup.picasso.Picasso
-import retrofit2.Call
-import retrofit2.Callback
-import retrofit2.Response
-import kotlin.coroutines.coroutineContext
 
 
-class GareAdapter(private val gares: ArrayList<Gare>,private val gareUpdater: GareUpdater): RecyclerView.Adapter<GareViewHolder>() {
-    private lateinit var context:Context
+class GareAdapter(private val gares: ArrayList<Gare>, private val gareUpdater: GareUpdater) :
+    RecyclerView.Adapter<GareViewHolder>() {
+    private lateinit var context: Context
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): GareViewHolder {
         val row = LayoutInflater.from(parent.context).inflate(R.layout.row_gare, parent, false)
-        context=parent.context
+        context = parent.context
 
         return GareViewHolder(row)
     }
-
 
 
     override fun onBindViewHolder(holder: GareViewHolder, position: Int) {
@@ -59,21 +52,21 @@ class GareAdapter(private val gares: ArrayList<Gare>,private val gareUpdater: Ga
         holder.txvTitre.text = titre
         holder.txvPeriode.text = periode
 
-        val httpsImages=images.replace("http","https")
-        Picasso.get().load(httpsImages).into(holder.txvImage);
+        val httpsImages = images.replace("http", "https")
+        Picasso.get().load(httpsImages).into(holder.txvImage)
 
         holder.btnFavoris.setOnClickListener {
 
-            gareUpdater.onGareUpdate(holder,gares[position],favoris)
+            gareUpdater.onGareUpdate(holder, gares[position], favoris)
         }
 
-        toggleFavoris(holder,favoris)
-        holder.itemView.setOnClickListener{
-            val intent= Intent(context,GareDetails::class.java)
-            intent.putExtra("iTitre",titre)
-            intent.putExtra("iImage",httpsImages)
-            intent.putExtra("iLegende",legende)
-            intent.putExtra("iPeriode",periode)
+        toggleFavoris(holder, favoris)
+        holder.itemView.setOnClickListener {
+            val intent = Intent(context, GareDetails::class.java)
+            intent.putExtra("iTitre", titre)
+            intent.putExtra("iImage", httpsImages)
+            intent.putExtra("iLegende", legende)
+            intent.putExtra("iPeriode", periode)
 
             context.startActivity(intent)
         }
@@ -86,12 +79,16 @@ class GareAdapter(private val gares: ArrayList<Gare>,private val gareUpdater: Ga
     }
 
 
-    fun toggleFavoris(holder: GareViewHolder,favoris:Boolean)
-    {   var icon:Int
-        if(favoris) {icon=R.drawable.ic_baseline_favorite_24}
-        else {icon=R.drawable.ic_baseline_favorite_border_24}
+    fun toggleFavoris(holder: GareViewHolder, favoris: Boolean) {
+        var icon: Int
+        if (favoris) {
+            icon = R.drawable.ic_baseline_favorite_24
+        } else {
+            icon = R.drawable.ic_baseline_favorite_border_24
+        }
         holder.btnFavoris.setImageDrawable(
-            ContextCompat.getDrawable(context, icon));
+            ContextCompat.getDrawable(context, icon)
+        )
     }
 
 }

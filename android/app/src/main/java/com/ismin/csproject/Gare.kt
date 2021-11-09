@@ -1,19 +1,20 @@
-package com.ismin.csproject;
-import java.io.Serializable;
+package com.ismin.csproject
+
+import java.io.Serializable
 
 data class Gare(
-    var favoris:Boolean,
+    var favoris: Boolean,
     val datasetid: String,
-    val recordid:String,
-    val date_de_numerisation:String,
-    val periode:String,
-    val lieux:String,
-    val origine_compagnie_sncf:String,
-    val sous_thematique:String,
-    val url_de_l_archive:String,
-    val lieux_de_conservation:String,
-    val coordx:String,
-    val coordy:String,
+    val recordid: String,
+    val date_de_numerisation: String,
+    val periode: String,
+    val lieux: String,
+    val origine_compagnie_sncf: String,
+    val sous_thematique: String,
+    val url_de_l_archive: String,
+    val lieux_de_conservation: String,
+    val coordx: String,
+    val coordy: String,
     val thematique: String,
     val date: String,
     val legende: String,
@@ -24,8 +25,8 @@ data class Gare(
     val images: String,
     val titre: String,
     val description_technique_document_original: String,
-    val id:String,
+    val id: String,
     val url_de_la_capture_d_ecran: String
 
-): Serializable {}
+) : Serializable
 

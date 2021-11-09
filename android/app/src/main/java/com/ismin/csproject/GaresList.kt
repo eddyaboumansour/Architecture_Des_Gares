@@ -19,7 +19,7 @@ class GaresList {
 
 
     fun getTotalNumberOfGares(): Int {
-        return storage.size;
+        return storage.size
     }
 
     fun clear() {

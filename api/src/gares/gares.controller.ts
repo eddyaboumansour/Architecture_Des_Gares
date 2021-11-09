@@ -5,7 +5,7 @@ import { GaresService } from './gares.service';
 
 @Controller('gares')
 export class GaresController {
-  constructor(private readonly garesService: GaresService) {}
+  constructor(private readonly garesService: GaresService) { }
 
   @Post()
   create(@Body() gare: Gare) {
@@ -13,15 +13,15 @@ export class GaresController {
   }
 
   @Get()
-  findAll(@Query('page') page:number=1,@Query('limit') limit:number=5) {
-    return this.garesService.findAll(page,limit);
+  findAll(@Query('page') page: number = 1, @Query('limit') limit: number = 5) {
+    return this.garesService.findAll(page, limit);
   }
- 
+
 
 
   @Get(':titre')
-  findOne(@Param('titre') titre: string,@Query('page') page:number=1,@Query('limit') limit:number=5) {
-    return this.garesService.search(titre,page,limit);
+  findOne(@Param('titre') titre: string, @Query('page') page: number = 1, @Query('limit') limit: number = 5) {
+    return this.garesService.search(titre, page, limit);
   }
 
   @Patch(':titre')
@@ -29,8 +29,4 @@ export class GaresController {
     return this.garesService.update(titre, favoris);
   }
 
- // @Delete(':id')
-  //remove(@Param('id') id: string) {
-    //return this.garesService.remove(+id);
- // }
 }
